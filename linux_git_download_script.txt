@@ -1,0 +1,21 @@
+*installation:
+->source: https://unix.stackexchange.com/questions/33617/how-can-i-update-to-a-newer-version-of-git-using-apt-get
+
+sudo add-apt-repository ppa:git-core/ppa -y
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com A1715D88E1DF1F24 40976EAF437D05B5 3B4FE6ACC0B21F32 A6616109451BBBF2
+sudo apt-get update
+sudo apt-get install git -y
+git --version
+
+
+*ssh key generation:
+->source: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+ssh-keygen -t ed25519 -C "dogancantop.git@gmail.com"
+
+
+*set origin for ssh:
+->source: https://stackoverflow.com/questions/17580261/authentication-failure-on-github-even-after-adding-ssh-key
+
+git remote add origin git@github.com:Korsva/python.git
+
